@@ -5,11 +5,11 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Landing from './pages/landing';
-import About from './pages/about';
-import Data from './pages/data';
-import Map from './pages/map';
-import NoMatch from './pages/404';
+import Landing from './views/landing';
+import About from './views/about';
+import Data from './views/data';
+import Map from './views/map';
+import NoMatch from './views/404';
 
 import store from './store';
 
