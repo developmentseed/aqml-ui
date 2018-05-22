@@ -1,0 +1,24 @@
+.page-header {
+  @extend .clearfix;
+  margin-top: $global-spacing;
+  width: 100%;
+}
+
+.page__headline {
+  float: left;
+  font-size: 1.25rem;
+
+}
+
+.prime-nav {
+  float: right;
+}
+
+.prime-nav--list {
+  li {
+    font-size: 0.875rem;
+    float: left;
+    display: inline;
+    margin-right: $global-spacing * 1.5;
+  }
+}

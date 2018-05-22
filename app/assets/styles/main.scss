@@ -40,9 +40,17 @@
 
 /* Settings
    ========================================================================== */
+@import "settings/functions";
+@import "settings/mixins";
+@import "settings/variables";
 
+@import "utilities";
+
+@import "components/buttons";
 
 /* Main
    ========================================================================== */
 
 @import "base";
+@import "global/page-nav";
+@import "home/global";
