@@ -4,9 +4,8 @@ var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 var watchify = require('watchify');
+var budo = require('budo');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
@@ -55,22 +54,19 @@ gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
 
-gulp.task('serve', ['vendorScripts', 'javascript', 'styles'], function () {
-  browserSync({
+gulp.task('serve', ['styles'], function () {
+  budo('app/assets/scripts/main.js:assets/scripts/bundle.js', {
+    stream: process.stdout,
+    dir: ['app/', '.tmp/'],
+    live: true,
     port: 3000,
-    server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {
-        '/node_modules': './node_modules'
-      }
-    }
+    pushstate: true,
+    watchGlob: [
+      'app/*.html',
+      'app/assets/graphics/**/*',
+      'app/assets/styles/main.css'
+    ]
   });
-
-  // watch for changes
-  gulp.watch([
-    'app/*.html',
-    'app/assets/graphics/**/*'
-  ]).on('change', reload);
 
   gulp.watch('app/assets/styles/**/*.scss', ['styles']);
   gulp.watch('package.json', ['vendorScripts']);
@@ -122,8 +118,7 @@ gulp.task('javascript', function () {
       // Source maps.
       .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('.tmp/assets/scripts'))
-      .pipe(reload({stream: true}));
+      .pipe(gulp.dest('.tmp/assets/scripts'));
   }
 
   watcher
@@ -148,8 +143,7 @@ gulp.task('vendorScripts', function () {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('.tmp/assets/scripts/'))
-    .pipe(reload({stream: true}));
+    .pipe(gulp.dest('.tmp/assets/scripts/'));
 });
 
 // //////////////////////////////////////////////////////////////////////////////
@@ -192,8 +186,7 @@ gulp.task('styles', function () {
       includePaths: ['.'].concat(require('node-bourbon').includePaths)
     }))
     .pipe($.sourcemaps.write())
-    .pipe(gulp.dest('.tmp/assets/styles'))
-    .pipe(reload({stream: true}));
+    .pipe(gulp.dest('.tmp/assets/styles'));
 });
 
 gulp.task('html', ['styles'], function () {
