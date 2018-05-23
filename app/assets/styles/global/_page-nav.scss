@@ -2,6 +2,8 @@
   @extend .clearfix;
   margin-top: $global-spacing;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 
 .page__headline {
