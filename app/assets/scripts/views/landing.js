@@ -1,5 +1,6 @@
 'use strict';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Nav from '../components/header-nav';
 
 class Landing extends React.Component {
@@ -27,8 +28,13 @@ class Landing extends React.Component {
                       <li>112<span>μg/m³</span><small>lowest reading</small></li>
                     </ul>
                   </div>
-                  <button className='button button--base-bounded'>View Air Quality</button>
+                  <Link to="/cities/new-delhi">
+                    <button className='button button--base-bounded'>
+                      View Air Quality
+                    </button>
+                  </Link>
                 </li>
+
                 <li className='card'>
                   <div className='card__header'>
                     <h3 className='card__title'>New Delhi<small>India</small></h3>
@@ -40,7 +46,11 @@ class Landing extends React.Component {
                       <li>112<span>μg/m³</span><small>lowest reading</small></li>
                     </ul>
                   </div>
-                  <button className='button button--base-bounded'>View Air Quality</button>
+                  <Link to="/cities/new-delhi">
+                    <button className='button button--base-bounded'>
+                      View Air Quality
+                    </button>
+                  </Link>
                 </li>
               </ul>
             </section>
