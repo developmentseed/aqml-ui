@@ -1,0 +1,40 @@
+
+.mapboxgl-popup-content {
+  color: #000;
+  position: relative;
+  background: rgba(#fff, 0.6);
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: $global-spacing;
+  pointer-events: auto;
+  font-family: $base-font-family;
+}
+
+
+.mapboxgl-popup-tip {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  z-index: 1;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  border-top-color: rgba(#fff, 0.4);
+}
+
+.station-name {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: $global-spacing/4;
+}
+
+.reading {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.popup__header {
+  padding-bottom: $global-spacing/2;
+  margin-bottom: $global-spacing/2;
+  border-bottom: solid 1px rgba(#000, 0.3);
+}

@@ -17,7 +17,7 @@
 
 .map__panel {
   color: #000;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.6);
   position: relative;
   z-index: 1;
   top: $global-spacing * 5;
@@ -68,7 +68,7 @@
 }
 
 .label {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: $base-font-regular;
 }
 
@@ -89,7 +89,7 @@
 .guidelines-list {
   li {
     font-weight: $base-font-light;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
 }
 
