@@ -1,8 +1,8 @@
-import { data } from 'aqml-test-data';
+import data from './test-data';
 
 const source = {
   type: 'geojson',
-  data: data.houston.pm25
+  data: data
 };
 
 const layer = {
