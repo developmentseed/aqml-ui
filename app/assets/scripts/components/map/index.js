@@ -23,9 +23,13 @@ class Map extends React.Component {
     this.map.on('click', (e) => {
       console.log(e);
       const popupHtml = `<div>
-        <p>oh hey</p>
-        <p>lat: ${e.lngLat.lat}</p>
-        <p>lon: ${e.lngLat.lon}</p>
+        <div class='popup__header'>
+          <p class='label'>Last reading:</p>
+          <p class='reading'>3.90 µg/m³ at 2016/03/28 06:00</p>
+        </div>
+        <p class='label'>Nearest Station 10km away</p>
+        <p class='station-key station-name'>Houston Park Place C</p>
+        <p class='reading'>3.90 µg/m³ at 2016/03/28 06:00</p>
       </div>`;
 
       return new mapboxgl.Popup()

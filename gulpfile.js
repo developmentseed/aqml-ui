@@ -63,6 +63,7 @@ gulp.task('serve', ['styles'], function () {
     pushstate: true,
     watchGlob: [
       'app/*.html',
+      'app/assets/styles/**/*.scss',
       'app/assets/graphics/**/*',
       'app/assets/styles/main.css'
     ]

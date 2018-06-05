@@ -1,0 +1,98 @@
+.map {
+  > .inner {
+    @extend .row, .row--centered;
+  }
+}
+.map__container {
+  margin: 0;
+}
+
+.mapboxgl-map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  z-index: 0;
+  width:100%; 
+}
+
+.map__panel {
+  color: #000;
+  background-color: rgba(255,255,255,0.6);
+  position: relative;
+  z-index: 1;
+  top: $global-spacing * 5;
+  padding: $global-spacing;
+  width: 30%;
+  border-radius: 5px;
+  a {
+    color: #000;
+    text-decoration: underline;
+    font-size: 0.75rem;
+    font-weight: $base-font-regular;
+  }
+}
+
+.panel__title {
+  font-size: 2rem;
+  font-weight: $base-font-regular; 
+  line-height: 2.25rem;
+}
+
+.panel__subtitle {
+  font-size: 1rem;
+  font-weight: $base-font-light; 
+}
+
+.panel__temperature {
+  font-weight: $base-font-light; 
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.panel__date {
+  font-weight: $base-font-light;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.panel__header {
+  padding-bottom: $global-spacing;
+  margin-bottom: $global-spacing;
+  border-bottom: solid 1px rgba(0,0,0, 0.2);
+}
+
+.note {
+  font-size: 0.875rem;
+  font-style: italic;
+  font-weight: $base-font-light;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: $base-font-regular;
+}
+
+.panel__item {
+  margin-bottom: $global-spacing;
+}
+
+.station-key {
+  position: relative;
+  padding-left: $global-spacing * 1.5;
+  &:before {
+    content: url('../graphics/content/ground-station-light.svg');
+    position: absolute;
+    left: 0;
+  };
+}
+
+.guidelines-list {
+  li {
+    font-weight: $base-font-light;
+    font-size: 0.875rem;
+  }
+}
+
+.time-icon {
+  float: right;
+}
