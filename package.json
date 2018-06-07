@@ -94,6 +94,12 @@
     "watchify": "^3.11.0"
   },
   "dependencies": {
+    "@turf/bbox": "^6.0.1",
+    "@turf/boolean-point-in-polygon": "^6.0.1",
+    "@turf/buffer": "^5.1.5",
+    "@turf/distance": "^6.0.1",
+    "@turf/envelope": "^5.1.5",
+    "@turf/hex-grid": "^6.0.2",
     "aqml-test-data": "developmentseed/aqml-test-data",
     "date-fns": "^1.29.0",
     "lodash.defaultsdeep": "^4.6.0",

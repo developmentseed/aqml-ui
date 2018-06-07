@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import mapboxgl from 'mapbox-gl';
 
-import heatmap from './style/heatmap-example';
+import hexgrid from './style/hexgrid';
+import points from './style/points';
 
 import config from '../../config';
 mapboxgl.accessToken = config.mapboxAccessToken;
@@ -17,7 +18,8 @@ class Map extends React.Component {
     });
 
     this.map.on('load', () => {
-      this.map.addLayer(heatmap);
+      this.map.addLayer(hexgrid);
+      // this.map.addLayer(points);
     });
 
     this.map.on('click', (e) => {
