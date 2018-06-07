@@ -18,8 +18,8 @@ class Map extends React.Component {
     });
 
     this.map.on('load', () => {
-      // this.map.addLayer(hexgrid);
-      this.map.addLayer(points);
+      this.map.addLayer(hexgrid);
+      // this.map.addLayer(points);
     });
 
     this.map.on('click', (e) => {
