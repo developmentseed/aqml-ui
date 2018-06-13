@@ -18,8 +18,6 @@ grid.features = grid.features.map((feature) => {
   }
 }).filter((feature) => !!feature);
 
-grid.features.forEach(console.log);
-
 const source = {
   type: 'geojson',
   data: grid
@@ -42,7 +40,14 @@ const layer = {
     'fill-color': {
       property: 'concentration',
       stops: stops
-    }
+    },
+    'fill-opacity': [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      7, 1,
+      9, 0
+    ]
   }
 };
 

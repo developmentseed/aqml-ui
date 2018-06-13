@@ -1,7 +1,9 @@
 'use strict';
 import React from 'react';
+
 import Map from '../components/map';
 import Nav from '../components/header-nav';
+import Sparklines from '../components/sparklines';
 
 class MapView extends React.Component {
   render () {
@@ -52,6 +54,7 @@ class MapView extends React.Component {
             </div>
             <div className='panel__body'>
               <h2 className='label'>Readings Over the Last 24 Hours</h2>
+              <Sparklines />
             </div>
           </div>
         </div>

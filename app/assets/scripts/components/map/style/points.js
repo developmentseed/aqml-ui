@@ -6,12 +6,12 @@ const source = {
 };
 
 const stops = [
-  [0, 'rgba(33,102,172,1)'],
-  [50, 'rgba(103,169,207,1)'],
-  [150, 'rgba(209,229,240,1)'],
-  [200, 'rgba(253,219,199,1)'],
-  [300, 'rgba(239,138,98,1)'],
-  [500, 'rgba(178,24,43,1)']
+  [0, 'rgba(0,228,2, 0.6)'],
+  [50, 'rgba(255,255,2, 0.6)'],
+  [150, 'rgba(256,126,2,0.6)'],
+  [200, 'rgba(255,0,2,0.6)'],
+  [300, 'rgba(153,0,76,0.6)'],
+  [500, 'rgba(126,0,35,0.6)']
 ];
 
 const layer = {
@@ -23,7 +23,14 @@ const layer = {
       property: 'concentration',
       stops: stops
     },
-    'circle-radius': 10
+    'circle-radius': 10,
+    'circle-opacity': [
+      'interpolate',
+      ['linear'],
+      ['zoom'],
+      7, 0,
+      8, 1
+    ]
   }
 };
 
