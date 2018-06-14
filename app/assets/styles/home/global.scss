@@ -75,7 +75,9 @@
   width: 100%;
   float: left;
   li {
+    position: relative;
     margin-right: $global-spacing;
+    padding-left: $global-spacing;
     font-size: 1.35rem;
     float: left;
     display: inline-block;
@@ -85,9 +87,21 @@
     }
     small {
       display: block;
-      font-size: 0.875rem;
+      font-size: 0.675rem;
       line-height: 1rem;
+      font-weight: $base-font-regular;
+      text-transform: uppercase;
     }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      height: 12px;
+      width: 12px;
+      border-radius: 999px;
+      background-color: #8CE02F;
+    };
   }
 }
 

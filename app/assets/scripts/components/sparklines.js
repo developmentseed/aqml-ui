@@ -18,13 +18,13 @@ class Sparklines extends React.Component {
     return (
       <div ref={this.setRef.bind(this)}>
         <LineChart
-          width={165}
+          width={250}
           height={50}
           data={data}
           margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
         >
-          <Line type="linear" dot={false} dataKey="modelEstimate" stroke="#ff7300" yAxisId={0} />
-          <Line type="linear" dot={false} dataKey="groundStation" stroke="#387908" yAxisId={1} />
+          <Line type="linear" dot={false} dataKey="modelEstimate" stroke="#5B5B5B" yAxisId={0} />
+          <Line type="linear" dot={false} dataKey="groundStation" stroke="#5890FF" yAxisId={1} />
         </LineChart>
       </div>
     );

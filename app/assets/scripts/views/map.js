@@ -55,6 +55,10 @@ class MapView extends React.Component {
             <div className='panel__body'>
               <h2 className='label'>Readings Over the Last 24 Hours</h2>
               <Sparklines />
+              <ul className='sparkline-key'>
+                <li className='sparkline--model'>model estimate</li>
+                <li>ground stations</li>
+              </ul>
             </div>
           </div>
         </div>

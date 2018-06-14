@@ -23,13 +23,13 @@ const layer = {
       property: 'concentration',
       stops: stops
     },
-    'circle-radius': 10,
+    'circle-radius': 15,
     'circle-opacity': [
       'interpolate',
       ['linear'],
       ['zoom'],
-      7, 0,
-      8, 1
+      9, 0,
+      10, 1
     ]
   }
 };
