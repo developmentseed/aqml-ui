@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import mapboxgl from 'mapbox-gl';
 
 import hexgrid from './style/hexgrid';
+import heatmap from './style/heatmap';
 import points from './style/points';
 
 import config from '../../config';
@@ -14,12 +15,14 @@ class Map extends React.Component {
     const style = 'mapbox://styles/devseed/cjhi9mjln0abb2soaw4rv130t';
     this.map = new mapboxgl.Map({
       container: this.refs.map,
-      style
+      style,
+      zoom: 6,
+      center: [-95.3713875043689, 29.70250884391558]
     });
 
     this.map.on('load', () => {
       this.map.addLayer(hexgrid);
-      // this.map.addLayer(points);
+      this.map.addLayer(points);
     });
 
     this.map.on('click', (e) => {
